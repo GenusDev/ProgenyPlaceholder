@@ -77,55 +77,58 @@ class AboutModal extends React.Component {
           contentLabel="About Modal"
           className="about-modal">
           <div className="aboutBuffer"> </div>
-          <div className="about-body">
-            <span className="sumSentence"> Progeny provides a crowdfunding portal tailored to the needs of developers that transforms the equity of real estate projects into liquid transferable tokens.
-            </span>
-            <br/>
-            <br/>
-            With the advent of blockchain technology, financial capital has the potential to be more accessible than ever before to people with novel ideas, while providing tools for investors to increase transparency and accountability for their investments Progeny seeks to fulfill this potential by providing prospective real estate developers with blockchain tools and resources to manage, showcase, and finance their projects. In particular, Progeny will aid developers in transforming the equity of their projects into into tradable asset-backed digital tokens, using either a Reg D or Reg A exemption from the SEC. Investors will use each developer-specific portal as an analytical dashboard for tracking the performance of their investment and vetting the proposed prospects of each developer. While we are focusing our platform on the needs of real estate developers, especially facilitating SEC compliance,  we intend to make use of blockchain technology’s growing cross-platform and decentralized apparatus of enabling infrastructure for investors.
-          </div>
-          <div className="teamIntro"> <span> - - - </span> <span> - - - - - - - - - - - - </span>       <span> team </span>        <span> - - - - - - - - - - - - </span> <span> - - - </span> </div>
-          <div className="team">
-            <div className="team-row">
-              <Profile
-                  name="steven tortoga"
-                  imgsrc={StevenImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-              <Profile
-                  name="mat steele"
-                  imgsrc={MattImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-              <Profile
-                  name="liam zhang"
-                  imgsrc={LiamImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+          <div className="scrollableContent">
+            <div className="about-body">
+              <span className="sumSentence"> Progeny provides a crowdfunding portal tailored to the needs of developers that transforms the equity of real estate projects into liquid transferable tokens.
+              </span>
+              <br/>
+              <br/>
+              With the advent of blockchain technology, financial capital has the potential to be more accessible than ever before to people with novel ideas, while providing tools for investors to increase transparency and accountability for their investments Progeny seeks to fulfill this potential by providing prospective real estate developers with blockchain tools and resources to manage, showcase, and finance their projects. In particular, Progeny will aid developers in transforming the equity of their projects into into tradable asset-backed digital tokens, using either a Reg D or Reg A exemption from the SEC. Investors will use each developer-specific portal as an analytical dashboard for tracking the performance of their investment and vetting the proposed prospects of each developer. While we are focusing our platform on the needs of real estate developers, especially facilitating SEC compliance,  we intend to make use of blockchain technology’s growing cross-platform and decentralized apparatus of enabling infrastructure for investors.
             </div>
+            <div className="teamIntro"> <span> - - - </span> <span> - - - - - - - - - - - - </span>       <span> team </span>        <span> - - - - - - - - - - - - </span> <span> - - - </span> </div>
+            <div className="team">
+              <div className="team-row">
+                <Profile
+                    name="steven tortora"
+                    imgsrc={StevenImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                <Profile
+                    name="mat steele"
+                    imgsrc={MattImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                <Profile
+                    name="liam zhang"
+                    imgsrc={LiamImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+              </div>
 
-            <div className="team-row">
-              <Profile
-                  name="laura chavez"
-                  imgsrc={LauraImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-              <Profile
-                  name="ana canales"
-                  imgsrc={AnaImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-              <Profile
-                  name="john rudell"
-                  imgsrc={JohnImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+              <div className="team-row">
+                <Profile
+                    name="laura chavez"
+                    imgsrc={LauraImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                <Profile
+                    name="ana canales"
+                    imgsrc={AnaImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                <Profile
+                    name="john rudell"
+                    imgsrc={JohnImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+              </div>
+              <div className="team-row">
+                <Profile
+                    name="giorgi suladze"
+                    imgsrc={GioImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                <Profile
+                    name="Dare tortoga"
+                    imgsrc={DareImage}
+                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+              </div>
             </div>
-            <div className="team-row">
-              <Profile
-                  name="giorgi suladze"
-                  imgsrc={GioImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-              <Profile
-                  name="Dare tortoga"
-                  imgsrc={DareImage}
-                  description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
-            </div>
-        </div>
+          </div>
+
 
         </Modal>
       </div>
