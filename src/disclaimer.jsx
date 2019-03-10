@@ -1,5 +1,5 @@
 import React from 'react';
-import { button1, button2 } from './buttons';
+import { buttonWithOptions } from './buttons';
 import { storeInfo } from  './storeinfo';
 import './stylesheets/main.scss';
 
@@ -10,10 +10,10 @@ class Disclaimer extends React.Component {
 
     this.state = {
       email: '',
-      identity1: 'hidden-button',
-      identity2: 'hidden-selection-form',
+      buttonClass: ['hideSubmitForm', ""], //showSubmitButtonWithAllOptions, showSubmitButtonOnly, hideSubmitForm
+      emailFormClass: "email-form",
       role: '',
-      button: 'button1',
+      // button: 'button1',
       email_input_status: false,
       email_style: 'email-input email-input-1',
       errors: []
@@ -33,33 +33,39 @@ class Disclaimer extends React.Component {
   //   return false; // This prevents future re-renders of this component
   // }
 
-  update(property) {
+  update() { //can assume email always
     return (e) => {
+      console.log("email", e.currentTarget.value );
       e.preventDefault();
-      this.setState({ [property]: e.currentTarget.value }, () => {
+      this.setState({ ['email']: e.currentTarget.value }, () => {
+        console.log("email", this.state.email, this.state.identity2 );
         if(this.state.email === '' && this.state.identity2 === '') {
           this.setState({
-            identity1: 'hidden-button',
-            identity2: 'hidden-selection-form',
-            button: 'button1',
+            buttonClass: ['hideSubmitForm', ""],
             email_style: 'email-input email-input-1',
             errors: ''
           });
         } else if(this.state.email !== '') {
-          this.setState({ identity1: 'button'});
+          this.setState({
+            buttonClass: ['submitForm', ""],
+          });
         } else {
-          this.setState({ identity1: 'hidden-button'});
+          this.setState({
+            buttonClass: ['hideSubmitForm', ""],
+          });
         }
       });
     };
   }
 
-  openSelections(e) {
+  openSelections(e) { //disable email submission
+    console.log("open selections")
     this.setState({
-      button: 'button2',
-      identity2: 'selection-form',
+      buttonClass: ['submitForm', "submitFormWithOptions"],
+      emailFormClass: "email-form email-form-open",
       email_style: 'email-input email-input-2'
     });
+
   }
 
   selectRole(e) {
@@ -67,30 +73,15 @@ class Disclaimer extends React.Component {
   }
 
   handleSubmit() {
-    var user = {
+    const user = {
       email: this.state.email.toLowerCase(),
       role: this.state.role
     };
+    console.log(user)
+    this.handlePostSubmit();
 
-    storeInfo(user).then(
-      (res) => {
-        this.setState({ errors: '' });
-        this.handlePostSubmit();
-      }, err => {
-        if(err.responseJSON.email && err.responseJSON.role) {
-          this.setState({
-            errors: err.responseJSON.email.concat(err.responseJSON.role)
-          });
-        } else if(err.responseJSON.email) {
-          this.setState({
-            errors: err.responseJSON.email
-          });
-        } else if(err.responseJSON.role) {
-          this.setState({
-            errors: err.responseJSON.role
-          });
-        }
-      });
+    storeInfo(user)
+
   }
 
   renderErrors() {
@@ -111,32 +102,27 @@ class Disclaimer extends React.Component {
   handlePostSubmit() {
     this.setState({
       email: 'submitted',
-      identity1: 'hidden-button',
-      identity2: 'hidden-selection-form',
+      buttonClass: ['hideSubmitForm', ""],
+      emailFormClass: "email-form",
       email_style: 'email-input email-input-3',
       email_input_status: !this.state.email_input_status
     });
   }
 
   render() {
-
-    let { email, identity1, identity2,
-          email_input_status, email_style } = this.state;
+    let { buttonClass,
+          email, email_input_status, email_style } = this.state;
     let { openSelections, selectRole, handleSubmit } = this;
     let renderedButton = '';
 
-    if (this.state.button === 'button1') {
-      renderedButton = button1(identity1, openSelections);
-    } else if (this.state.button === 'button2') {
-      renderedButton = button2(identity2, selectRole, handleSubmit);
-    }
+    renderedButton = buttonWithOptions(buttonClass, selectRole, openSelections, handleSubmit);
 
     return (
         <div className="disclaimer">
           <div className="disclaimerText" > portal under <br/> construction </div>
             <div className="content-top">stay in touch</div>
             <div className="content-mid">
-              <div className="email-form">
+              <div className={`${this.state.emailFormClass}`}>
                 <input
                   className={ email_style }
                   name="email"
@@ -144,16 +130,14 @@ class Disclaimer extends React.Component {
                   placeholder= "submit email"
                   value={ email }
                   disabled={ email_input_status }
-                  onChange={ this.update('email') }/>
+                  onChange={ this.update() }/>
                 {renderedButton}
               </div>
             </div>
             <div className="content-bot">
               {this.renderErrors()}
             </div>
-
         </div>
-
     );
   }
 }

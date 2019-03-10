@@ -1,5 +1,6 @@
 // Colors
-$brightTeal: rgba(40, 142, 139, 0.9);
+$brightTeal: rgba(1, 194, 203, 0.9); //rgba(40, 142, 139, 0.9);
+$greyTeal:  rgba(11, 40, 39, 0.97);
 $white: rgb(255, 255, 255);
 $white-fade1: rgba(255, 255, 255, 0.7);
 $white-fade2: rgba(255, 255, 255, 0.4);
@@ -14,4 +15,17 @@ $font-vlg: 50px;
 @font-face {
   font-family: "light";
   src: url("fonts/KozGoPr6N-ExtraLight.otf");
+}
+
+
+.bounceOnHover{
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+  }
+}
+
+.hidden{
+  display:none;
 }

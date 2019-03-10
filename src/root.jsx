@@ -1,18 +1,14 @@
 import React from 'react';
 import * as d3 from "d3";
-import { button1, button2 } from './buttons';
-import { storeInfo } from  './storeinfo';
 import AboutModal from './about_modal';
+import Pdfviewer from './pdfViewer';
 import logo from './assets/ProgenyLogo.png';
 
-import demo from './assets/icons/demo.svg';
-import conceptPaper from './assets/icons/conceptPaper.svg';
-import legalMemo from './assets/icons/legalMemo.svg';
-import finAnal from './assets/icons/finAnalysis.svg';
 
 
 import Disclaimer from './disclaimer'
 import './stylesheets/main.scss';
+// import 'semantic-ui-css/semantic.min.css'
 
 class Root extends React.Component {
 
@@ -20,16 +16,14 @@ class Root extends React.Component {
     super(props);
 
     this.state = {
-      email: '',
-      identity1: 'hidden-button',
-      identity2: 'hidden-selection-form',
-      role: '',
-      button: 'button1',
-      email_input_status: false,
-      email_style: 'email-input email-input-1',
-      errors: []
+      opacityLayerClass: "opacity-layer-colorTeal",
+      columnLayerClass: 'mainColumnCentral',
+      linksClass: 'links'
     };
 
+    this.setOpacityLayerClass = this.setOpacityLayerClass.bind(this);
+    this.shiftMainColumnRight = this.shiftMainColumnRight.bind(this);
+    this.removeLinksDiv = this.removeLinksDiv.bind(this);
   }
 
   componentDidMount() {
@@ -86,17 +80,36 @@ class Root extends React.Component {
           .transition()
           .duration(2000)
           .style("background", "rgba(40, 142, 139, 0.9)");
+
       });
   }
 
+  removeLinksDiv(classToChangeTo){
+    console.log("classToChangeTo",classToChangeTo)
+    this.setState({
+      linksClass: classToChangeTo
+    })
+    console.log("state", this.state)
+  }
+
+  setOpacityLayerClass(classToChangeTo){
+    this.setState({
+      opacityLayerClass: classToChangeTo
+    })
+  }
+
+  shiftMainColumnRight(classToChangeTo){
+    this.setState({
+      columnLayerClass: classToChangeTo
+    })
+  }
 
   render() {
 
-
     return (
-      <div className="opacity-layer box">
+      <div className={`${this.state.opacityLayerClass} opacity-layer box`}>
         <div className="dataDescrip"> traffic clustering in NYC <br/> <span> source: NYC DOT  </span> </div>
-        <div className='mainColumn'>
+        <div className={`${this.state.columnLayerClass} mainColumn`}>
           <div className="top series header">
             <div className="header header-cont">
               <img className="logo" src={logo} alt="logo"/>
@@ -105,30 +118,22 @@ class Root extends React.Component {
               <div className="header-sub">BLOCKCHAIN </div>
               <div className="header-sub"> PLATFORM</div>
             </div>
-            <AboutModal/>
+            <AboutModal
+              setOpacityLayerClass={this.setOpacityLayerClass}
+              removeLinksDiv={this.removeLinksDiv}
+              />
           </div>
 
-          <div className="links">
-            <div className="linkDiv demo">
-              <img id="demoIcon" alt="demo" src={demo}/>
-              <div className="linkDescrip">DEMO</div>
-            </div>
-            <div className="linkDiv">
-              <img id="linkIcon" alt="conceptMap" src={conceptPaper}/>
-              <div className="linkDescrip"> CONCEPT PAPER</div>
-            </div>
-            <div className="linkDiv">
-              <img id="demoLogo"  alt="legalMemo" src={legalMemo}/>
-              <div className="linkDescrip">LEGAL MEMO</div>
-            </div>
-            <div className="linkDiv">
-              <img id="linkIcon"  alt="finAnal" src={finAnal}/>
-              <div className="linkDescrip"> FINANCIAL ANALYSIS </div>
-            </div>
-          </div>
+            <Pdfviewer
+              setOpacityLayerClass={this.setOpacityLayerClass}
+              shiftMainColumnRight={this.shiftMainColumnRight}
+              linksClass={this.state.linksClass}
+              />
+
       </div>
 
       <Disclaimer />
+
 
     </div>
     );

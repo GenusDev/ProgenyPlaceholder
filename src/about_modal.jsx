@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
-import $ from "jquery";
-import './stylesheets/about.scss';
+// import $ from "jquery";
+
 
 import StevenImage from './assets/photos/Steven2.jpg';
 import MattImage from './assets/photos/Mat2.jpg';
@@ -21,7 +21,9 @@ class AboutModal extends React.Component {
     super(props);
 
     this.state = {
-      openModal: true,
+      openModal: false,
+      openButtonClass: "about-button",
+      closeButtonClass: "hiddenButt"
     };
 
     window.SessionOpenModal = () => {
@@ -29,21 +31,28 @@ class AboutModal extends React.Component {
     };
 
     window.SessionOpenModal = window.SessionOpenModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  openModal() {
-    this.setState({ openModal: true });
-    $('.open').css("display", "none");
-    $('.close').css("display", "block");
+  toggleModal(modalState) { //make one function with variables
+
+
+    this.setState({
+      openModal: !this.state.openModal,
+      openButtonClass: modalState === "open" ? "hiddenButt" : "about-button",
+      closeButtonClass: modalState === "open" ? "about-button" : "hiddenButt"
+    });
+
+
+    let linkClass =  modalState === "open" ? "hidden" : "links"
+    this.props.removeLinksDiv(linkClass)
+
+
+  }
+  componentWillMount(){
+    Modal.setAppElement('body');
   }
 
-  closeModal() {
-    this.setState({ openModal: false });
-    $('.close').css("display", "none");
-    $('.open').css("display", "block");
-  }
 
   render() {
 
@@ -51,24 +60,25 @@ class AboutModal extends React.Component {
       return(
         <div className="team-column">
           <div> {props.name} </div>
-          <img src={props.imgsrc} />
+          <div className="imageOverlay">
+            <img src={props.imgsrc} />
+          </div>
           <div className="profileDescrip"> {props.description}</div>
         </div>
       )
     }
 
-
-
+    console.log("render state", this.state)
 
     return(
       <div className="about-container">
-        <img className="open about-button"
+        <img className={`${this.state.openButtonClass}`}
           src="https://s3.amazonaws.com/genie-placeholder/about-butt.png"
-          onClick={this.openModal}
+          onClick={() => this.toggleModal("open")}
           alt="about button"/>
-        <img className="close about-button"
+        <img className={`${this.state.closeButtonClass}`}
           src="https://s3.amazonaws.com/genie-placeholder/about-exit-butt.png"
-          onClick={this.closeModal}
+          onClick={ () => this.toggleModal("close")}
           alt="exit button"/>
         <Modal
           isOpen={this.state.openModal}
@@ -85,7 +95,7 @@ class AboutModal extends React.Component {
               <br/>
               With the advent of blockchain technology, financial capital has the potential to be more accessible than ever before to people with novel ideas, while providing tools for investors to increase transparency and accountability for their investments Progeny seeks to fulfill this potential by providing prospective real estate developers with blockchain tools and resources to manage, showcase, and finance their projects. In particular, Progeny will aid developers in transforming the equity of their projects into into tradable asset-backed digital tokens, using either a Reg D or Reg A exemption from the SEC. Investors will use each developer-specific portal as an analytical dashboard for tracking the performance of their investment and vetting the proposed prospects of each developer. While we are focusing our platform on the needs of real estate developers, especially facilitating SEC compliance,  we intend to make use of blockchain technology’s growing cross-platform and decentralized apparatus of enabling infrastructure for investors.
             </div>
-            <div className="teamIntro"> <span> - - - </span> <span> - - - - - - - - - - - - </span>       <span> team </span>        <span> - - - - - - - - - - - - </span> <span> - - - </span> </div>
+            <div className="teamIntro"> <span> - - - </span> <span> - - - - - - - - - - - - </span>       <span> TEAM </span>        <span> - - - - - - - - - - - - </span> <span> - - - </span> </div>
             <div className="team">
               <div className="team-row">
                 <Profile
@@ -95,36 +105,36 @@ class AboutModal extends React.Component {
                 <Profile
                     name="mat steele"
                     imgsrc={MattImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="With a background in international and community development and data science, Mat provides broad management support."/>
                 <Profile
                     name="liam zhang"
                     imgsrc={LiamImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="Liam is our masterful lead front-end programmer. "/>
               </div>
 
               <div className="team-row">
                 <Profile
                     name="laura chavez"
                     imgsrc={LauraImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="Lau is an incoming SIPA student with a policy background. She is guiding filings with the SEC, and helps with HR and external contracts."/>
                 <Profile
                     name="ana canales"
                     imgsrc={AnaImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="With a background in comp sci and anthro, Ana is the perfect manager for moving our project forward."/>
                 <Profile
                     name="john rudell"
                     imgsrc={JohnImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="John works at Gemini, and helped found Progeny. He provides support with design and our front-end."/>
               </div>
               <div className="team-row">
                 <Profile
                     name="giorgi suladze"
                     imgsrc={GioImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="With a background in management consulting, Giorgi has helped with financial and economic analysis and built up Progeny’s operating framework"/>
                 <Profile
-                    name="Dare tortoga"
+                    name="obadare gundipe"
                     imgsrc={DareImage}
-                    description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                    description="Dare works part-time developing the architecture for how Progeny will instatiate each portal. "/>
               </div>
             </div>
           </div>
