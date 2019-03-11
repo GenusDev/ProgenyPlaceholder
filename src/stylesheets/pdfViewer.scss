@@ -1,14 +1,10 @@
 @import 'variables.scss';
 
-// .pdfViewer-container-hidden {
-//   display: none;
-// }
-
 .pdfViewer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 11;
+  // z-index: 11;
   height:50%;
   .demo{
     margin-bottom: 15px;

@@ -18,11 +18,14 @@ class Root extends React.Component {
     this.state = {
       opacityLayerClass: "opacity-layer-colorTeal",
       columnLayerClass: 'mainColumnCentral',
+      profileDescripClass: "",
+      description: "testing Text",
       linksClass: 'links'
     };
 
     this.setOpacityLayerClass = this.setOpacityLayerClass.bind(this);
-    this.shiftMainColumnRight = this.shiftMainColumnRight.bind(this);
+    this.setProfDescripClassandContent = this.setProfDescripClassandContent.bind(this);
+    this.shiftMainColumn = this.shiftMainColumn.bind(this);
     this.removeLinksDiv = this.removeLinksDiv.bind(this);
   }
 
@@ -98,7 +101,15 @@ class Root extends React.Component {
     })
   }
 
-  shiftMainColumnRight(classToChangeTo){
+  setProfDescripClassandContent(classToChangeTo, profileDescription){
+    console.log( "hoverMovement", classToChangeTo, profileDescription )
+    this.setState({
+      profileDescripClass: classToChangeTo,
+      profileDescription: profileDescription
+    })
+  }
+
+  shiftMainColumn(classToChangeTo){
     this.setState({
       columnLayerClass: classToChangeTo
     })
@@ -121,16 +132,19 @@ class Root extends React.Component {
             <AboutModal
               setOpacityLayerClass={this.setOpacityLayerClass}
               removeLinksDiv={this.removeLinksDiv}
+              shiftMainColumn={this.shiftMainColumn}
+              setProfDescripClassandContent={this.setProfDescripClassandContent}
               />
           </div>
 
-            <Pdfviewer
-              setOpacityLayerClass={this.setOpacityLayerClass}
-              shiftMainColumnRight={this.shiftMainColumnRight}
-              linksClass={this.state.linksClass}
-              />
+          <Pdfviewer
+            setOpacityLayerClass={this.setOpacityLayerClass}
+            shiftMainColumn={this.shiftMainColumn}
+            linksClass={this.state.linksClass}
+            />
 
       </div>
+      <div className={`${this.state.profileDescripClass}` }> {this.state.profileDescription} </div>
 
       <Disclaimer />
 

@@ -26,7 +26,7 @@ body {
 #root {
   width: 100%;
   height: 100%;
-  background-image: url('https://s3.amazonaws.com/genie-placeholder/background-shifted.png');
+  background-image: url('../assets/background-shifted.png'); //https://s3.amazonaws.com/genie-placeholder/background-shifted.png
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -61,6 +61,7 @@ body {
     .mainColumnRight{
       width: 15%;
       align-self: flex-start;
+      z-index:11;
       .top{
         display: none;
       }
@@ -107,6 +108,19 @@ body {
   }
 }
 
+
+.profileDescriptions{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  width: 15%;
+  align-self: flex-start;
+  z-index:11;
+  color: white;
+  margin: 20px;
+}
 
 .logo {
   object-fit: contain;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import { Button, Icon } from 'semantic-ui-react'
@@ -52,7 +52,7 @@ class Pdfviewer extends React.Component {
     if(this.state.featuredDoc === idName || this.state.featuredDoc === "") {
       let greyedLinksClass =  this.state.openModal? "" : "linkDiv-Grey";
       let columnClass =  !this.state.openModal? "mainColumnRight" : "mainColumnCentral"
-      this.props.shiftMainColumnRight(columnClass)
+      this.props.shiftMainColumn(columnClass)
       let demoClass =  this.state.openModal? "" : "hidden"
 
       this.setState({

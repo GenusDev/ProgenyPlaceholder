@@ -27,5 +27,9 @@ $font-vlg: 50px;
 }
 
 .hidden{
-  display:none;
+  display:none !important;
+}
+
+.notTransparent{
+  opacity: 1 !important;
 }
