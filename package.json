@@ -2,10 +2,12 @@
   "name": "progeny-placeholder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://prgny.github.io/",
   "dependencies": {
     "clean-webpack-plugin": "^2.0.0",
     "d3": "^5.9.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "gh-pages": "^2.0.1",
     "googleapis": "^27.0.0",
     "html-webpack-plugin": "^3.2.0",
     "install": "^0.12.2",
@@ -25,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
