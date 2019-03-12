@@ -1,13 +1,13 @@
 {
   "main.css": "/progenyPlaceholder/static/css/main.7d913b46.chunk.css",
-  "main.js": "/progenyPlaceholder/static/js/main.dbfabab0.chunk.js",
-  "main.js.map": "/progenyPlaceholder/static/js/main.dbfabab0.chunk.js.map",
+  "main.js": "/progenyPlaceholder/static/js/main.f084af1e.chunk.js",
+  "main.js.map": "/progenyPlaceholder/static/js/main.f084af1e.chunk.js.map",
   "runtime~main.js": "/progenyPlaceholder/static/js/runtime~main.97c2a48c.js",
   "runtime~main.js.map": "/progenyPlaceholder/static/js/runtime~main.97c2a48c.js.map",
   "static/js/2.05250111.chunk.js": "/progenyPlaceholder/static/js/2.05250111.chunk.js",
   "static/js/2.05250111.chunk.js.map": "/progenyPlaceholder/static/js/2.05250111.chunk.js.map",
   "index.html": "/progenyPlaceholder/index.html",
-  "precache-manifest.9b099a2f74cddaf516df9f149fc88949.js": "/progenyPlaceholder/precache-manifest.9b099a2f74cddaf516df9f149fc88949.js",
+  "precache-manifest.8507cf102139a995addd48ae738b6606.js": "/progenyPlaceholder/precache-manifest.8507cf102139a995addd48ae738b6606.js",
   "service-worker.js": "/progenyPlaceholder/service-worker.js",
   "static/css/main.7d913b46.chunk.css.map": "/progenyPlaceholder/static/css/main.7d913b46.chunk.css.map",
   "static/media/Ana.png": "/progenyPlaceholder/static/media/Ana.efe4558e.png",
@@ -26,5 +26,5 @@
   "static/media/mat.png": "/progenyPlaceholder/static/media/mat.3c44ecbb.png",
   "static/media/steven.png": "/progenyPlaceholder/static/media/steven.8207a3b9.png",
   "static/media/twitter.svg": "/progenyPlaceholder/static/media/twitter.2f88ac0e.svg",
-  "static/media/white_paper.pdf": "/progenyPlaceholder/static/media/white_paper.295ba401.pdf"
+  "static/media/white_paper.pdf": "/progenyPlaceholder/static/media/white_paper.1d972365.pdf"
 }

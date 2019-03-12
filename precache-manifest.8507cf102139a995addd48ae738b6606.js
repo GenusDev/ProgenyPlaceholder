@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/progenyPlaceholder/static/media/laura.faeffa3e.png"
   },
   {
-    "revision": "dbfabab05b6a2e712e0e",
+    "revision": "f084af1e99d297491028",
     "url": "/progenyPlaceholder/static/css/main.7d913b46.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/progenyPlaceholder/static/media/john.bc431881.png"
   },
   {
-    "revision": "dbfabab05b6a2e712e0e",
-    "url": "/progenyPlaceholder/static/js/main.dbfabab0.chunk.js"
+    "revision": "f084af1e99d297491028",
+    "url": "/progenyPlaceholder/static/js/main.f084af1e.chunk.js"
   },
   {
     "revision": "c2a1623c9446b0218880d81f665285ac",
@@ -64,8 +64,8 @@ self.__precacheManifest = [
     "url": "/progenyPlaceholder/static/media/dare.42133ec3.png"
   },
   {
-    "revision": "295ba401d1394ee7a098f1df8599caab",
-    "url": "/progenyPlaceholder/static/media/white_paper.295ba401.pdf"
+    "revision": "1d972365cc812d756a966fde7ad49735",
+    "url": "/progenyPlaceholder/static/media/white_paper.1d972365.pdf"
   },
   {
     "revision": "295ba401d1394ee7a098f1df8599caab",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/progenyPlaceholder/static/media/finAnalysis.71f458d1.svg"
   },
   {
-    "revision": "efb5b6717e174f14cfa47c94da83927d",
+    "revision": "18c755d688c3c9d77c0d54bec4067f0f",
     "url": "/progenyPlaceholder/index.html"
   }
 ];
