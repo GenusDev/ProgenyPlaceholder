@@ -49,7 +49,7 @@ class Pdfviewer extends React.Component {
 
   toggleModal(idName) { //make one function with variables
 
-    if(this.state.featuredDoc === idName || this.state.featuredDoc === "") {
+    if(this.state.featuredDoc === idName || this.state.featuredDoc === "" || idName == 'close') {
       let greyedLinksClass =  this.state.openModal? "" : "linkDiv-Grey";
       let columnClass =  !this.state.openModal? "mainColumnRight" : "mainColumnCentral"
       this.props.shiftMainColumn(columnClass)
@@ -85,6 +85,7 @@ class Pdfviewer extends React.Component {
       this.setState({pageNumber:this.state.pageNumber+1})
       : this.setState({pageNumber:1})
   }
+
 
   render() {
     const { pageNumber, numPages } = this.state;
@@ -171,7 +172,7 @@ class Pdfviewer extends React.Component {
           contentLabel="About Modal"
           className="pdfViewer-modal">
 
-            <Icon className="downloadButton bounceOnHover" color="teal" size="big" link name="cloud download" />
+            <a href={this.state.PDFDoc} download={this.state.PDFDoc} > <Icon className="downloadButton bounceOnHover" color="teal" size="big" link name="cloud download" /> </a>
             <div>
               <Document
                 file={this.state.PDFDoc}
@@ -181,7 +182,7 @@ class Pdfviewer extends React.Component {
               </Document>
               <p>page <span className='pageNumber'> {pageNumber} </span> of {numPages}</p>
               <PageTurner />
-              <Icon className="exitButton bounceOnHover"  color="teal" size="big" link name="times circle" onClick={() => this.toggleModal()} />
+              <Icon className="exitButton bounceOnHover"  color="teal" size="big" link name="times circle" onClick={() => this.toggleModal('close')} />
             </div>
 
         </Modal>

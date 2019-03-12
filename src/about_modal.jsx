@@ -21,9 +21,7 @@ import GioImage from './assets/photos/editedPhotos/gio.png';
 import DareImage from './assets/photos/editedPhotos/dare.png';
 
 
-
 class AboutModal extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -61,6 +59,7 @@ class AboutModal extends React.Component {
   toggleTeam () {
     const mainColumnClass = this.state.showTeam?  "mainColumnCentral" : "hidden"
     this.props.shiftMainColumn(mainColumnClass)
+    this.props.setProfDescripClassandContent("hidden", "")
     this.setState({
       showTeam: !this.state.showTeam,
     })
