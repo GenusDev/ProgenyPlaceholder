@@ -2,7 +2,7 @@
   "name": "progeny-placeholder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prgny.github.io/progenyPlaceholder/",
+  "homepage": "https://prgny.io/",
   "dependencies": {
     "clean-webpack-plugin": "^2.0.0",
     "d3": "^5.9.1",
