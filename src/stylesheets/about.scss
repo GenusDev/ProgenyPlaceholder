@@ -23,33 +23,48 @@
 
   .teamIntro{
     display: flex;
-    font-size: 20px;
+    font-size: 15px;
     // width: 100%;
-    height: 75px;
+    // height: 75px;
     width: 120px;
     justify-content: space-evenly;
     color: white;
     margin: 20px;
     font-family:light;
+    img{
+      height: 60px;
+    }
   }
-  .scrollableContent{
+  .about-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
+
     width: 80%;
+    @media screen and (max-width: 500px) {
+    // width: 100%;
+    }
     .about-body{
+      .aboutBuffer{
+        height: 325px;
+        width: 100%;
+      }
       width: 100%;
       height: 100%;
       text-align: justify;
       font-weight: 200;
       color: $white-fade1;
       font-family: light;
+      font-size: 12px;
       .sumSentence{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
         color: white;
+      }
+      .scrollableContent{
+
       }
     }
     .team{
@@ -74,7 +89,7 @@
         .team-column{
           // height:100%;
           width: 150px;
-          font-size: 20px;
+          font-size: 15px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -86,10 +101,16 @@
 
           .imageOverlay{
             background-color: rgba(40, 142, 139, 0.5);
+            align-self: center;
+
             img{
               display: block;
               width: 150px;
               height: 150px;
+              @media screen and (max-width: 500px) {
+                width: 100px;
+                height: 100px;
+              }
             }
           }
           .title{

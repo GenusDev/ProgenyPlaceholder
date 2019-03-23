@@ -51,6 +51,7 @@ body {
     width: 100%;
     height: 100%;
     .dataDescrip {
+      position: absolute;
       color: $brightTeal;
       font-size: $font-md;
       align-self: flex-start;
@@ -77,6 +78,9 @@ body {
       height: 100%;
       .header-main{
         font-size: $font-vlg;
+      }
+      .subdescription{
+        text-align:center;
       }
       .header-cont {
         z-index: 999;

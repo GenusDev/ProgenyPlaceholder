@@ -59,7 +59,7 @@ class Pdfviewer extends React.Component {
 
   toggleModal(idName) { //make one function with variables
 
-    if(this.state.featuredDoc === idName || this.state.featuredDoc === "" || idName == 'close') {
+    if(this.state.featuredDoc === idName || this.state.featuredDoc === "" || idName === 'close') {
       let greyedLinksClass =  this.state.openModal? "" : "linkDiv-Grey";
       let columnClass =  !this.state.openModal? "mainColumnRight" : "mainColumnCentral"
       this.props.shiftMainColumn(columnClass)
@@ -108,14 +108,14 @@ class Pdfviewer extends React.Component {
       return(
         <div className="PageTurner">
           {this.state.pageNumber > 1 ?
-            <Button
+            <Button compact
               className="pageturnerButton"
               labelPosition='left'
               icon='left chevron'
               content='back'
               onClick={() => this.setState({pageNumber:this.state.pageNumber-1})}/>
             : ""}
-          <Button
+          <Button compact
             className="pageturnerButton"
             labelPosition='right'
             icon='right chevron'
@@ -193,6 +193,7 @@ class Pdfviewer extends React.Component {
               <Document
                 file={this.state.PDFDoc}
                 onLoadSuccess={this.onDocumentLoadSuccess}
+                onClick={()=>this.changePage()}
               >
                 <Page pageNumber={pageNumber} size="A1"/>
               </Document>

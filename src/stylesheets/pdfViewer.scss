@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   // z-index: 11;
+  overflow-y: auto;
   height:50%;
   .demo{
     margin-bottom: 15px;
@@ -13,13 +14,15 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
+    margin-top: 15px;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     .linkDiv-Grey{
       opacity: .5
     }
     .linkDiv{
+      font-size: 16px;
       z-index: 5;
       align-content: center;
       transition: all .2s ease-in-out;
@@ -38,6 +41,52 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+.react-pdf__Page__canvas{
+  width: 400px !important;
+  height: 519px !important;
+    // &:active {
+    //   width: 800px !important;
+    //   height: 919px !important;
+    // }
+}
+
+@media screen and (max-height: 800px) {
+  .pdfViewer-container {
+    .demo{
+    }
+    .links{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 55px;
+      height: 100%;
+      // justify-content: space-evenly;
+      .linkDiv-Grey{
+        opacity: .5
+      }
+      .linkDiv{
+        img{
+          height: 38px;
+        }
+        #demoIcon{
+          height: 80px;
+        }
+        &:hover {
+          transform: scale(1.2, 1.2);
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+>>>>>>> 054a4368cc85e6a0c1488ab5d37bb579482273c1
 .pdfViewer-modal{
   display: flex;
   justify-content: center;
@@ -47,6 +96,7 @@
   font-size: $font-md;
   font-family: light;
   text-align: center;
+  overflow-y: scroll;
   i.teal.icon {
     color: $brightTeal!important;
   }
@@ -56,16 +106,19 @@
   .pageNumber{
     color: $brightTeal;
   }
+  i.big.icon{
+    font-size: 1.25em;
+  }
   .pageturnerButton{
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    // width: 10px;
     &:hover {
       color: $brightTeal;
     }
   }
   .exitButton{
     margin-right: 0px;
-    margin-top: 25px;
+    // margin-top: 25px;
     color: $brightTeal;
   }
 }
