@@ -148,14 +148,14 @@ class AboutModal extends React.Component {
                         title="communications manager"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/laura-a-chavez-varela/'
-                        description="Lau is an incoming SIPA student with a policy background. She is guiding filings with the SEC, and helps with HR and external contracts."/>
+                        description="Lau is an incoming Columbia SIPA student with a policy background at the UN. She is guiding filings with the SEC, and helps with HR and external contracts."/>
                     <Profile
                         name="ana canales"
                         imgsrc={AnaImage}
                         title="project manager"
                         twitterLink='https://twitter.com/Pia_Solis'
                         linkedinLink='https://www.linkedin.com/in/assolisc/'
-                        description="With a background in comp sci and anthro, Ana is the perfect manager for moving our project forward."/>
+                        description="Ana is working at Losonczy Lab in Columbia's Jerome L. Greene Science Center. With a background in comp sci and anthro, Ana is the perfect manager for moving our project forward."/>
                     <Profile
                         name="john rudell"
                         imgsrc={JohnImage}

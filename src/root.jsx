@@ -60,7 +60,7 @@ class Root extends React.Component {
         d3.select(this)
           .transition()
           .duration(200)
-          .attr("stroke", "rgba(40, 142, 139, 0.95)")
+          .attr("stroke", "rgba(1, 194, 203, 0.9)")
           .attr("stroke-width", "1")
           .attr("fill-opacity", "0.05")
           .attr("r", function(d) {
@@ -82,7 +82,7 @@ class Root extends React.Component {
         d3.select(".opacity-layer")
           .transition()
           .duration(2000)
-          .style("background", "rgba(40, 142, 139, 0.9)");
+          .style("background", 'rgba(1, 194, 203, 0.9)');
 
       });
   }
@@ -125,9 +125,12 @@ class Root extends React.Component {
             <div className="header header-cont">
               <img className="logo" src={logo} alt="logo"/>
               <div className="header-main">PROGENY</div>
-              <div className="header-sub">REAL ESTATE</div>
-              <div className="header-sub">BLOCKCHAIN </div>
-              <div className="header-sub"> PLATFORM</div>
+              <div className="subdescription">
+                <div className="header-sub">REAL ESTATE</div>
+                <div className="header-sub">BLOCKCHAIN </div>
+                <div className="header-sub"> PLATFORM</div>
+              </div>
+
             </div>
             <AboutModal
               setOpacityLayerClass={this.setOpacityLayerClass}
