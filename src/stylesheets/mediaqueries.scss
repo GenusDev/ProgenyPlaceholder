@@ -17,45 +17,51 @@
 }
 
 //phone
+
 @media screen and (max-width: 500px) {
-.dataDescrip{
-  display: none;
-}
-.profileDescriptions{
-  display: none !important;
-}
-.city-points{
-  display:none;
-}
-.mainColumnRight{
-  display: none !important;
-}
-.header{
-  flex-direction: column-reverse !important;
-  justify-content: flex-end;
-  .logo,
-  .subdescription{
+  .dataDescrip{
     display: none;
   }
-}
-.about-modal{
-  font-size: 10px;
-  .aboutBuffer{
-    height: 40%;
+  .profileDescriptions{
+    display: none !important;
   }
-  .sumSentence{
-    font-size: 10px !important;
+  .city-points{
+    display:none;
   }
-}
-
-.pdfViewer-container{
-  .links{
-    .linkDiv{
+  .mainColumnRight{
+    display: none !important;
+  }
+  .header{
+    flex-direction: column-reverse !important;
+    justify-content: flex-end;
+    .logo,
+    .subdescription{
+      display: none;
+    }
+  }
+  .about-modal{
+    font-size: 10px;
+    .aboutBuffer{
+      height: 250px !important;
+    }
+    .about-body{
+      .scrollableContent{
+        overflow-y: auto;
+        height: 300px;
+      }
+    }
+    .sumSentence{
       font-size: 10px !important;
     }
   }
-}
 
+  .pdfViewer-container{
+    .links{
+      .linkDiv{
+        font-size: 10px !important;
+      }
+    }
+  }
 }
 
 // // Remove D3 on smaller screen sizes

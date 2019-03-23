@@ -90,7 +90,7 @@ class Root extends React.Component {
   removeLinksDiv(classToChangeTo){
     console.log("classToChangeTo",classToChangeTo)
     this.setState({
-      linksClass: classToChangeTo
+      linksClass: classToChangeTo,
     })
     console.log("state", this.state)
   }
@@ -125,7 +125,7 @@ class Root extends React.Component {
             <div className="header header-cont">
               <img className="logo" src={logo} alt="logo"/>
               <div className="header-main">PROGENY</div>
-              <div className="subdescription">
+              <div className={`${this.state.linksClass} subdescription`}>
                 <div className="header-sub">REAL ESTATE</div>
                 <div className="header-sub">BLOCKCHAIN </div>
                 <div className="header-sub"> PLATFORM</div>

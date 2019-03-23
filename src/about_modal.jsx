@@ -106,15 +106,19 @@ class AboutModal extends React.Component {
           style={ModalStyle}
           contentLabel="About Modal"
           className="about-modal">
-          <div className= {this.state.showTeam? 'hidden' : "aboutBuffer"}> </div>
-              <div className="scrollableContent" >
+
+              <div className="about-div" >
                 <div className={this.state.showTeam? 'hidden' : "about-body"} >
-                  <span className="sumSentence"> Progeny provides a crowdfunding portal tailored to the needs of developers that transforms the equity of real estate projects into liquid transferable tokens.
-                  </span>
-                  <br/>
-                  <br/>
-                  With the advent of blockchain technology, financial capital has the potential to be more accessible than ever before to people with novel ideas, while providing tools for investors to increase transparency and accountability for their investments Progeny seeks to fulfill this potential by providing prospective real estate developers with blockchain tools and resources to manage, showcase, and finance their projects. In particular, Progeny will aid developers in transforming the equity of their projects into into tradable asset-backed digital tokens, using either a Reg D or Reg A exemption from the SEC. Investors will use each developer-specific portal as an analytical dashboard for tracking the performance of their investment and vetting the proposed prospects of each developer. While we are focusing our platform on the needs of real estate developers, especially facilitating SEC compliance,  we intend to make use of blockchain technology’s growing cross-platform and decentralized apparatus of enabling infrastructure for investors.
+                  <div className= {this.state.showTeam? 'hidden' : "aboutBuffer"}> </div>
+                  <div className="scrollableContent" >
+                    <span className="sumSentence"> Progeny provides a crowdfunding portal tailored to the needs of developers that transforms the equity of real estate projects into liquid transferable tokens.
+                    </span>
+                    <br/>
+                    <br/>
+                    With the advent of blockchain technology, financial capital has the potential to be more accessible than ever before to people with novel ideas, while providing tools for investors to increase transparency and accountability for their investments Progeny seeks to fulfill this potential by providing prospective real estate developers with blockchain tools and resources to manage, showcase, and finance their projects. In particular, Progeny will aid developers in transforming the equity of their projects into into tradable asset-backed digital tokens, using either a Reg D or Reg A exemption from the SEC. Investors will use each developer-specific portal as an analytical dashboard for tracking the performance of their investment and vetting the proposed prospects of each developer. While we are focusing our platform on the needs of real estate developers, especially facilitating SEC compliance,  we intend to make use of blockchain technology’s growing cross-platform and decentralized apparatus of enabling infrastructure for investors.
+                  </div>
                 </div>
+
                 <div className= "teamIntro bounceOnHover" onClick={this.toggleTeam}>  <img alt="teamIcon" src={this.state.showTeam? teamDown : teamUp} />   </div>
                 <div className= {`${!this.state.showTeam? 'hidden' : ""} team`} >
                   <div className="team-row">
