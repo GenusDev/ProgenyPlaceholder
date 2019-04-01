@@ -8,8 +8,8 @@ import white_paper from './assets/white_paper.pdf';
 import legal_memo from './assets/legal_memo.pdf';
 
 
-import conceptPaperIcon from './assets/icons/conceptPaper.svg';
-import demoIcon from './assets/icons/demo.svg';
+import conceptPaperIcon from './assets/icons/conceptPaperGray.svg';
+import demoIcon from './assets/icons/demoGray.svg';
 import legalMemoIcon from './assets/icons/legalMemo.svg';
 import finAnalIcon from './assets/icons/finAnalysis.svg';
 
