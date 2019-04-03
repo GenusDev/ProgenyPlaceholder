@@ -176,7 +176,7 @@ class AboutModal extends React.Component {
                         title="project manager"
                         twitterLink='https://twitter.com/giosuladze'
                         linkedinLink='https://www.linkedin.com/in/giorgisuladze/'
-                        description="With a background in management consulting, Giorgi has helped with financial and economic analysis and built up Progeny’s operating framework"/>
+                        description="With a background in management consulting, Giorgi has helped with our financial and economic analysis and built up Progeny’s operating framework"/>
                     <Profile
                         name="dare gundipe"
                         imgsrc={DareImage}
