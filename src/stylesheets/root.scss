@@ -81,6 +81,9 @@ body {
       }
       .subdescription{
         text-align:center;
+        flex-direction: row;
+        display: flex;
+        // color: #e6e6e6;
       }
       .header-cont {
         z-index: 999;
@@ -88,6 +91,16 @@ body {
         flex-direction: column;
         align-items: center;
         font-size: $font-lg;
+        .header-main{
+          display: flex;
+          flex-direction: row;
+          .logo {
+            object-fit: contain;
+            width: 100px;
+            height: 106px;
+            z-index: 11;
+          }
+        }
         .header-sub {
           opacity: 0.75;
           font-size: $font-md;
@@ -124,11 +137,4 @@ body {
   z-index:11;
   color: white;
   margin: 20px;
-}
-
-.logo {
-  object-fit: contain;
-  width: 70px;
-  height: 50px;
-  z-index: 11;
 }

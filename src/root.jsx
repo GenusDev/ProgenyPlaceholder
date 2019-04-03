@@ -2,7 +2,7 @@ import React from 'react';
 import * as d3 from "d3";
 import AboutModal from './about_modal';
 import Pdfviewer from './pdfViewer';
-import logo from './assets/ProgenyLogo.png';
+import logo from './assets/progenyLogoNewAbstractedGradient.png';
 
 
 
@@ -123,11 +123,14 @@ class Root extends React.Component {
         <div className={`${this.state.columnLayerClass} mainColumn`}>
           <div className="top series header">
             <div className="header header-cont">
-              <img className="logo" src={logo} alt="logo"/>
-              <div className="header-main">PROGENY</div>
+              <div className="header-main" >
+                <img className="logo" src={logo} alt="logo"/>
+                <div className="companyName">PROGENY</div>
+              </div>
+
               <div className={`${this.state.linksClass} subdescription`}>
-                <div className="header-sub">REAL ESTATE</div>
-                <div className="header-sub">BLOCKCHAIN </div>
+                <div className="header-sub">REAL ESTATE..</div>
+                <div className="header-sub">BLOCKCHAIN.. </div>
                 <div className="header-sub"> PLATFORM</div>
               </div>
 
