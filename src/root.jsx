@@ -2,7 +2,7 @@ import React from 'react';
 import * as d3 from "d3";
 import AboutModal from './about_modal';
 import Pdfviewer from './pdfViewer';
-import logo from './assets/progenyLogoNewAbstractedGradient.png';
+import logo from './assets/progenyLogoNewAbstractedGradient.jpg';
 
 
 
