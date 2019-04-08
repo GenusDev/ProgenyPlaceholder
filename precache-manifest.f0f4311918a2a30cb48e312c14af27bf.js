@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
     "revision": "c2a1623c9446b0218880d81f665285ac",
-    "url": "/static/media/liam.c2a1623c.png"
+    "url": "/static/media/liam.c2a1623c.jpg"
   },
   {
-    "revision": "944addfdb32a6caf9514",
-    "url": "/static/css/main.2f57a3ef.chunk.css"
+    "revision": "3f69c6a74305b1e41603",
+    "url": "/static/css/main.e5cf7771.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -21,7 +21,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "972615ece4bfff8d4fafd2c085217c1d",
-    "url": "/static/media/background-SmlResNoMargin.972615ec.png"
+    "url": "/static/media/background-SmlResNoMargin.972615ec.jpg"
   },
   {
     "revision": "2f88ac0e348d43e670ab879fad890d3d",
@@ -33,35 +33,35 @@ self.__precacheManifest = [
   },
   {
     "revision": "8207a3b90744126e26b3245f552c0c9b",
-    "url": "/static/media/steven.8207a3b9.png"
+    "url": "/static/media/steven.8207a3b9.jpg"
   },
   {
     "revision": "3c44ecbb7bad84838e2609810b5d76fd",
-    "url": "/static/media/mat.3c44ecbb.png"
+    "url": "/static/media/mat.3c44ecbb.jpg"
   },
   {
     "revision": "bc4318818d74d1c012bd1243a582829d",
-    "url": "/static/media/john.bc431881.png"
+    "url": "/static/media/john.bc431881.jpg"
   },
   {
     "revision": "faeffa3e4ab2295eb396943107ed8b3d",
-    "url": "/static/media/laura.faeffa3e.png"
+    "url": "/static/media/laura.faeffa3e.jpg"
   },
   {
-    "revision": "944addfdb32a6caf9514",
-    "url": "/static/js/main.944addfd.chunk.js"
+    "revision": "3f69c6a74305b1e41603",
+    "url": "/static/js/main.3f69c6a7.chunk.js"
   },
   {
     "revision": "efe4558e4bd6d457f7bfdc655ca197da",
-    "url": "/static/media/Ana.efe4558e.png"
+    "url": "/static/media/Ana.efe4558e.jpg"
   },
   {
     "revision": "7e26c24f49d003cc6d81538718dec6b2",
-    "url": "/static/media/gio.7e26c24f.png"
+    "url": "/static/media/gio.7e26c24f.jpg"
   },
   {
     "revision": "42133ec337cff38aea307141da0ec447",
-    "url": "/static/media/dare.42133ec3.png"
+    "url": "/static/media/dare.42133ec3.jpg"
   },
   {
     "revision": "13db4d2338978eb722885db2f28e45fa",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/static/media/finAnalysis.0ff3325d.svg"
   },
   {
-    "revision": "6421660815945778c66c4909f29a86ec",
+    "revision": "c03fee44411c46cc18323b7c8bd33a9a",
     "url": "/index.html"
   }
 ];
