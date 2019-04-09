@@ -3,10 +3,10 @@ import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 // import $ from "jquery";
 
-import teamUp from './assets/icons/teamViewUp.jpg';
-import teamDown from './assets/icons/teamViewDown.jpg';
-import aboutIn from './assets/icons/about-butt.jpg';
-import aboutOut from './assets/icons/about-exit-butt.jpg';
+import teamUp from './assets/icons/teamViewUp.png';
+import teamDown from './assets/icons/teamViewDown.png';
+import aboutIn from './assets/icons/about-butt.png';
+import aboutOut from './assets/icons/about-exit-butt.png';
 
 import twitter from './assets/icons/twitter.svg';
 import linkedin from './assets/icons/LinkedIn.svg';
