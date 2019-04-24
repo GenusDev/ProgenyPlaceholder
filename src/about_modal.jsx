@@ -152,7 +152,7 @@ class AboutModal extends React.Component {
                         title="communications manager"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/laura-a-chavez-varela/'
-                        description="Lau is an incoming Columbia SIPA student with a policy background at the UN. She is guiding filings with the SEC, and helps with HR and external contracts."/>
+                        description="Lau is an incoming Columbia/LSE student with a policy background. She is guiding filings with the SEC, and helps with HR and contracts."/>
                     <Profile
                         name="ana canales"
                         imgsrc={AnaImage}
