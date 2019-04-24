@@ -11,14 +11,14 @@ import aboutOut from './assets/icons/about-exit-butt.png';
 import twitter from './assets/icons/twitter.svg';
 import linkedin from './assets/icons/LinkedIn.svg';
 
-import StevenImage from './assets/photos/editedPhotos/steven.png';
-import MattImage from './assets/photos/editedPhotos/mat.png';
-import JohnImage from './assets/photos/editedPhotos/john.png';
-import LauraImage from './assets/photos/editedPhotos/laura.png';
-import LiamImage from './assets/photos/editedPhotos/liam.png';
-import AnaImage from './assets/photos/Ana.png';
-import GioImage from './assets/photos/editedPhotos/gio.png';
-import DareImage from './assets/photos/editedPhotos/dare.png';
+import StevenImage from './assets/photos/editedPhotos/steven.jpg';
+import MattImage from './assets/photos/editedPhotos/mat.jpg';
+import JohnImage from './assets/photos/editedPhotos/john.jpg';
+import LauraImage from './assets/photos/editedPhotos/laura.jpg';
+import LiamImage from './assets/photos/editedPhotos/liam.jpg';
+import AnaImage from './assets/photos/Ana.jpg';
+import GioImage from './assets/photos/editedPhotos/gio.jpg';
+import DareImage from './assets/photos/editedPhotos/dare.jpg';
 
 
 class AboutModal extends React.Component {
