@@ -128,45 +128,45 @@ class AboutModal extends React.Component {
                         title="blockchain engineer"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/steven-tortora-49392285/'
-                        description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                        description="Steven is our blockchain engineer. He is primarily focused on building out the platform’s blockchain architecture."/>
                     <Profile
                         name="mat steele"
                         imgsrc={MattImage}
-                        title="managing director"
+                        title="senior engineer"
                         twitterLink='https://twitter.com/urbanagrapher'
                         linkedinLink='https://www.linkedin.com/in/steven-tortora-49392285/'
-                        description="With a background in international and community development and data science, Mat provides broad management support."/>
+                        description="Mat provides broad technical support for our engineers."/>
                     <Profile
-                        name="liam zhang"
-                        imgsrc={LiamImage}
-                        title="front-end developer"
-                        twitterLink=''
-                        linkedinLink='https://www.linkedin.com/in/liamzhang40/'
-                        description="Liam is our masterful lead front-end programmer. "/>
+                        name="ana canales"
+                        imgsrc={AnaImage}
+                        title="back-end engineer"
+                        twitterLink='https://twitter.com/Pia_Solis'
+                        linkedinLink='https://www.linkedin.com/in/assolisc/'
+                        description="Ana works at the Losonczy Lab in Columbia's Jerome L. Greene Science Center. With a background in comp sci and anthro, Ana works part-time helping build how our site interacts with the blockchain."/>
                   </div>
 
                   <div className="team-row">
                     <Profile
                         name="laura chavez"
                         imgsrc={LauraImage}
-                        title="communications manager"
+                        title="project manager"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/laura-a-chavez-varela/'
-                        description="Lau is an incoming Columbia/LSE student with a policy background. She is guiding filings with the SEC, and helps with HR and contracts."/>
+                        description="Lau is a Columbia/LSE student with a policy background. She is guiding filings with the SEC, and helps with HR and contracts."/>
                     <Profile
-                        name="ana canales"
-                        imgsrc={AnaImage}
-                        title="project manager"
-                        twitterLink='https://twitter.com/Pia_Solis'
-                        linkedinLink='https://www.linkedin.com/in/assolisc/'
-                        description="Ana is working at Losonczy Lab in Columbia's Jerome L. Greene Science Center. With a background in comp sci and anthro, Ana is the perfect manager for moving our project forward."/>
+                        name="liam zhang"
+                        imgsrc={LiamImage}
+                        title="front-end developer"
+                        twitterLink=''
+                        linkedinLink='https://www.linkedin.com/in/liamzhang40/'
+                        description="Liam is our lead front-end programmer. "/>
                     <Profile
                         name="john rudell"
                         imgsrc={JohnImage}
                         title="front-end developer"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/johnrudell/'
-                        description="John works at Gemini, and helped found Progeny. He provides support with design and our front-end."/>
+                        description="John works at Gemini, and helped found Progeny. On the side, he continues to provide support with design and our front-end."/>
                   </div>
 
                   <div className="team-row">
