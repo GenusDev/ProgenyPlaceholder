@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Ana.9ca0ab8a.jpg"
   },
   {
-    "revision": "bab245c721356e8d74ac",
+    "revision": "0fdd99ce1d513ab0933a",
     "url": "/static/css/main.96787962.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/LinkedIn.def06dd2.svg"
   },
   {
-    "revision": "bab245c721356e8d74ac",
-    "url": "/static/js/main.bab245c7.chunk.js"
+    "revision": "0fdd99ce1d513ab0933a",
+    "url": "/static/js/main.0fdd99ce.chunk.js"
   },
   {
     "revision": "13db4d2338978eb722885db2f28e45fa",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/static/media/finAnalysis.0ff3325d.svg"
   },
   {
-    "revision": "49b043583e7cc3f0793c751af483612d",
+    "revision": "258319e4ef76bf48fb4ddaf766174a45",
     "url": "/index.html"
   }
 ];
