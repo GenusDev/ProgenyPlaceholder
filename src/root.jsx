@@ -1,9 +1,8 @@
 import React from 'react';
-import * as d3 from "d3";
+// import * as d3 from "d3";
 import AboutModal from './about_modal';
 import Pdfviewer from './pdfViewer';
 import logo from './assets/progenyLogoNewAbstractedGradient.png';
-
 
 
 import Disclaimer from './disclaimer'
@@ -29,18 +28,17 @@ class Root extends React.Component {
     this.removeLinksDiv = this.removeLinksDiv.bind(this);
   }
 
-  componentDidMount() {
-    /* D3 code to append elements to this.svg */
-    const data = [
-      { "x_axis": 341, "y_axis": 115},
-      { "x_axis": 335, "y_axis": 155},
-      { "x_axis": 300, "y_axis": 220},
-      { "x_axis": 290, "y_axis": 250},
-      { "x_axis": 370, "y_axis": 300},
-      { "x_axis": 260, "y_axis": 350},
-    ];
-
-    // const svg = d3.select("#root")
+  // componentDidMount() {
+  //   /* D3 code to append elements to this.svg */
+  //   const data = [
+  //     { "x_axis": 341, "y_axis": 115},
+  //     { "x_axis": 335, "y_axis": 155},
+  //     { "x_axis": 300, "y_axis": 220},
+  //     { "x_axis": 290, "y_axis": 250},
+  //     { "x_axis": 370, "y_axis": 300},
+  //     { "x_axis": 260, "y_axis": 350},
+  //   ];
+    // const svg = d3.select("
     //   .append("svg")
     //   .classed("city-points", true)
     //   .attr("viewBox", "0 0 800 600" )
@@ -83,16 +81,13 @@ class Root extends React.Component {
     //       .transition()
     //       .duration(2000)
     //       .style("background", 'rgba(1, 194, 203, 0.9)');
-
     //   });
-  }
+  // }
 
   removeLinksDiv(classToChangeTo){
-    console.log("classToChangeTo",classToChangeTo)
     this.setState({
       linksClass: classToChangeTo,
     })
-    console.log("state", this.state)
   }
 
   setOpacityLayerClass(classToChangeTo){
@@ -124,7 +119,10 @@ class Root extends React.Component {
           <div className="top series header">
             <div className="header header-cont">
               <div className="header-main" >
-                <img className="logo" src={logo} alt="logo"/>
+                <div className="logo">
+                  <img  src={logo} alt="logo" />
+                </div>
+                
                 <div className="companyName">PROGENY</div>
               </div>
 

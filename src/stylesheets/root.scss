@@ -94,10 +94,10 @@ body {
         .header-main{
           display: flex;
           flex-direction: row;
+          justify-content: center;
           .logo {
             object-fit: contain;
-            width: '100px';
-            height: '106px';
+            width: 25%;
             z-index: 11;
           }
         }
