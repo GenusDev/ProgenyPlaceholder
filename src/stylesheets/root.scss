@@ -24,9 +24,9 @@ body {
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-  // background-image: url('../assets/background-shifted.png'); //https://s3.amazonaws.com/genie-placeholder/background-shifted.png
+  width: '100%';
+  height: '100%';
+  // background-image: url('../assets/background-SmlResNoMargin.jpg'); //https://s3.amazonaws.com/genie-placeholder/background-SmlResNoMargin.jpg
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -48,8 +48,8 @@ body {
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    width: '100%';
+    height: '100%';
     .dataDescrip {
       position: absolute;
       color: $brightTeal;
@@ -60,7 +60,7 @@ body {
       }
     }
     .mainColumnRight{
-      width: 15%;
+      width: '15%';
       align-self: flex-start;
       z-index:11;
       .top{
@@ -74,8 +74,8 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 30%;
-      height: 100%;
+      width: '30%';
+      height: '100%';
       .header-main{
         font-size: $font-vlg;
       }
@@ -96,8 +96,8 @@ body {
           flex-direction: row;
           .logo {
             object-fit: contain;
-            width: 100px;
-            height: 106px;
+            width: '100px';
+            height: '106px';
             z-index: 11;
           }
         }
@@ -105,7 +105,7 @@ body {
           opacity: 0.75;
           font-size: $font-md;
           font-weight: 200;
-          margin-top: -16px;
+          margin-top: '-16px';
         }
       }
 
@@ -113,8 +113,8 @@ body {
   }
   .city-points {
     position: fixed;
-    height: 100%;
-    width: 100%;
+    height: '100%';
+    width: '100%';
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -130,9 +130,9 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  width: 15%;
+  width: '100%';
+  height: '100%';
+  width: '15%';
   align-self: flex-start;
   z-index:11;
   color: white;

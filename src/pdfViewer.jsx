@@ -6,7 +6,7 @@ import { Button, Icon } from 'semantic-ui-react'
 import { Document, Page, pdfjs } from 'react-pdf';
 import white_paper from './assets/white_paper.pdf';
 import legal_memo from './assets/legal_memo.pdf';
-
+import financial_analysis from './assets/financial_analysis.pdf';
 
 import conceptPaperIcon from './assets/icons/conceptPaperGray.svg';
 import demoIcon from './assets/icons/demoGray.svg';
@@ -19,8 +19,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const loadedDocs = {
   white_paper: white_paper,
-  legal_memo: legal_memo
+  legal_memo: legal_memo,
+  financial_analysis: financial_analysis
 }
+
+const loadedSheets = {
+  white_paper: "",
+  legal_memo: "",
+  financial_analysis: "https://docs.google.com/spreadsheets/d/1haLVNhoToOg6-KumjUygiv-7O7XS5UEL0rsbmG1KBdI/edit?usp=sharing"
+}
+
+
 
 
 class Pdfviewer extends React.Component {
@@ -35,7 +44,8 @@ class Pdfviewer extends React.Component {
       numPages: "",
       pageNumber: 1,
       PDFDoc: "",
-      featuredDoc: ""
+      featuredDoc: "",
+      sheet: ""
     };
 
     window.SessionOpenModal = () => {
@@ -59,6 +69,7 @@ class Pdfviewer extends React.Component {
         openModal: !this.state.openModal,
         featuredDoc: idName,
         PDFDoc: loadedDocs[idName],
+        sheet: loadedSheets[idName],
         demoClass,
         greyedLinksClass
       });
@@ -67,6 +78,8 @@ class Pdfviewer extends React.Component {
       this.setState({
         featuredDoc: idName,
         PDFDoc: loadedDocs[idName],
+        sheet: loadedSheets[idName],
+        pageNumber: 1,
       });
     }
   }
@@ -117,7 +130,7 @@ class Pdfviewer extends React.Component {
       <div className="pdfViewer-container">
 
         <div className={`${this.props.linksClass}`}>
-          <a href="https://www.genusdev.com" className={`${this.state.demoClass} linkDiv demo`}>
+          <a href="https://www.genusdev.com" target="_blank" rel="noopener noreferrer" className={`${this.state.demoClass} linkDiv demo`}>
             <img
               id="demo"
               alt="demo"
@@ -132,9 +145,10 @@ class Pdfviewer extends React.Component {
             <img
               alt="conceptMap"
               id='white_paper'
-              className="linkDiv"
               src={conceptPaperIcon}/>
-            <div className="linkDiv"id='white_paper'> CONCEPT PAPER</div>
+            <div
+              className="linkDescrip"
+              id='white_paper'> CONCEPT PAPER</div>
           </div>
 
           <div
@@ -151,15 +165,15 @@ class Pdfviewer extends React.Component {
           </div>
 
           <div
-            className={`${ this.state.featuredDoc === 'fin_analysis'? "" : this.state.greyedLinksClass} linkDiv`}
-            id="fin_analysis"
+            className={`${ this.state.featuredDoc === 'financial_analysis'? "" : this.state.greyedLinksClass} linkDiv`}
+            id="financial_analysis"
             onClick={(e) => toggleModal( e.target.id )}>
             <img
-              alt="fin_analysis"
-              id='fin_analysis'
+              alt="financial_analysis"
+              id='financial_analysis'
               onClick= {(e) => toggleModal(e.target.id)}
               src= {finAnalIcon}/>
-            <div className="linkDescrip" id='fin_analysis'> FINANCIAL ANALYSIS </div>
+            <div className="linkDescrip" id='financial_analysis'> FINANCIAL ANALYSIS </div>
           </div>
 
         </div>
@@ -171,8 +185,10 @@ class Pdfviewer extends React.Component {
           style={ModalStyle}
           contentLabel="About Modal"
           className="pdfViewer-modal">
-
-            <a href={this.state.PDFDoc} download={this.state.PDFDoc} > <Icon className="downloadButton bounceOnHover" color="teal" size="big" link name="cloud download" /> </a>
+            <div>
+              <a href={this.state.PDFDoc} download={this.state.PDFDoc} > <Icon className="downloadButton bounceOnHover" color="teal" size="big" link name="cloud download" /> </a>
+              {this.state.sheet? <a  href={this.state.sheet} target="_blank" rel="noopener noreferrer" > <Icon className="downloadButton bounceOnHover" color="teal" size="big" link name="calculator" /> </a> : "" }
+            </div>
             <div>
               <Document
                 file={this.state.PDFDoc}

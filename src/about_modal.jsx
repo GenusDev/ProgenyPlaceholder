@@ -11,14 +11,14 @@ import aboutOut from './assets/icons/about-exit-butt.png';
 import twitter from './assets/icons/twitter.svg';
 import linkedin from './assets/icons/LinkedIn.svg';
 
-import StevenImage from './assets/photos/editedPhotos/steven.png';
-import MattImage from './assets/photos/editedPhotos/mat.png';
-import JohnImage from './assets/photos/editedPhotos/john.png';
-import LauraImage from './assets/photos/editedPhotos/laura.png';
-import LiamImage from './assets/photos/editedPhotos/liam.png';
-import AnaImage from './assets/photos/Ana.png';
-import GioImage from './assets/photos/editedPhotos/gio.png';
-import DareImage from './assets/photos/editedPhotos/dare.png';
+import StevenImage from './assets/photos/editedPhotos/steven.jpg';
+import MattImage from './assets/photos/editedPhotos/mat.jpg';
+import JohnImage from './assets/photos/editedPhotos/john.jpg';
+import LauraImage from './assets/photos/editedPhotos/laura.jpg';
+import LiamImage from './assets/photos/editedPhotos/liam.jpg';
+import AnaImage from './assets/photos/Ana.jpg';
+import GioImage from './assets/photos/editedPhotos/gio.jpg';
+import DareImage from './assets/photos/editedPhotos/dare.jpg';
 
 
 class AboutModal extends React.Component {
@@ -128,45 +128,45 @@ class AboutModal extends React.Component {
                         title="blockchain engineer"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/steven-tortora-49392285/'
-                        description="Steven is our lead engineer, primarily focused on building out the platform’s blockchain infrastructure."/>
+                        description="Steven is our blockchain engineer. He is primarily focused on building out the platform’s blockchain architecture."/>
                     <Profile
                         name="mat steele"
                         imgsrc={MattImage}
-                        title="managing director"
+                        title="senior engineer"
                         twitterLink='https://twitter.com/urbanagrapher'
                         linkedinLink='https://www.linkedin.com/in/steven-tortora-49392285/'
-                        description="With a background in international and community development and data science, Mat provides broad management support."/>
+                        description="Mat provides broad technical support for our engineers."/>
                     <Profile
-                        name="liam zhang"
-                        imgsrc={LiamImage}
-                        title="front-end developer"
-                        twitterLink=''
-                        linkedinLink='https://www.linkedin.com/in/liamzhang40/'
-                        description="Liam is our masterful lead front-end programmer. "/>
+                        name="ana canales"
+                        imgsrc={AnaImage}
+                        title="back-end engineer"
+                        twitterLink='https://twitter.com/Pia_Solis'
+                        linkedinLink='https://www.linkedin.com/in/assolisc/'
+                        description="Ana works at the Losonczy Lab in Columbia's Jerome L. Greene Science Center. With a background in comp sci and anthro, Ana works part-time helping build how our site interacts with the blockchain."/>
                   </div>
 
                   <div className="team-row">
                     <Profile
                         name="laura chavez"
                         imgsrc={LauraImage}
-                        title="communications manager"
+                        title="project manager"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/laura-a-chavez-varela/'
-                        description="Lau is an incoming Columbia SIPA student with a policy background at the UN. She is guiding filings with the SEC, and helps with HR and external contracts."/>
+                        description="Lau is a Columbia/LSE student with a policy background. She is guiding filings with the SEC, and helps with HR and contracts."/>
                     <Profile
-                        name="ana canales"
-                        imgsrc={AnaImage}
-                        title="project manager"
-                        twitterLink='https://twitter.com/Pia_Solis'
-                        linkedinLink='https://www.linkedin.com/in/assolisc/'
-                        description="Ana is working at Losonczy Lab in Columbia's Jerome L. Greene Science Center. With a background in comp sci and anthro, Ana is the perfect manager for moving our project forward."/>
+                        name="liam zhang"
+                        imgsrc={LiamImage}
+                        title="front-end developer"
+                        twitterLink=''
+                        linkedinLink='https://www.linkedin.com/in/liamzhang40/'
+                        description="Liam is our lead front-end programmer. "/>
                     <Profile
                         name="john rudell"
                         imgsrc={JohnImage}
                         title="front-end developer"
                         twitterLink=''
                         linkedinLink='https://www.linkedin.com/in/johnrudell/'
-                        description="John works at Gemini, and helped found Progeny. He provides support with design and our front-end."/>
+                        description="John works at Gemini, and helped found Progeny. On the side, he continues to provide support with design and our front-end."/>
                   </div>
 
                   <div className="team-row">
@@ -176,7 +176,7 @@ class AboutModal extends React.Component {
                         title="project manager"
                         twitterLink='https://twitter.com/giosuladze'
                         linkedinLink='https://www.linkedin.com/in/giorgisuladze/'
-                        description="With a background in management consulting, Giorgi has helped with financial and economic analysis and built up Progeny’s operating framework"/>
+                        description="With a background in management consulting, Giorgi has helped with our financial and economic analysis and built up Progeny’s operating framework"/>
                     <Profile
                         name="dare gundipe"
                         imgsrc={DareImage}
