@@ -41,15 +41,10 @@ class AboutModal extends React.Component {
     this.leaveProfileHover = this.leaveProfileHover.bind(this);
   }
 
-  toggleModal(modalState) { //make one function with variables
-
+  toggleModal(modalState) { 
     this.setState({
       openModal: !this.state.openModal
     });
-
-    let linkClass =  this.state.openModal?  "links" : "hidden"
-    console.log("link class", linkClass)
-    this.props.removeLinksDiv(linkClass)
   }
 
   componentWillMount() {
@@ -173,7 +168,8 @@ class AboutModal extends React.Component {
                     <Profile
                         name="giorgi suladze"
                         imgsrc={GioImage}
-                        title="project manager"
+                        title="project
+ manager"
                         twitterLink='https://twitter.com/giosuladze'
                         linkedinLink='https://www.linkedin.com/in/giorgisuladze/'
                         description="With a background in management consulting, Giorgi has helped with our financial and economic analysis and built up Progeny’s operating framework"/>
