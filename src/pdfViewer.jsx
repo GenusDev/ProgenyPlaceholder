@@ -1,36 +1,34 @@
-import React from 'react';
-import Modal from 'react-modal';
-import { Button, Icon } from 'semantic-ui-react'
+import React from "react";
+import Modal from "react-modal";
+import { Button, Icon } from "semantic-ui-react";
+import { A } from "hookrouter";
 
-import { Document, Page, pdfjs } from 'react-pdf';
-import white_paper from './assets/white_paper.pdf';
-import legal_memo from './assets/legal_memo.pdf';
-import financial_analysis from './assets/financial_analysis.pdf';
+import { Document, Page, pdfjs } from "react-pdf";
+import white_paper from "./assets/white_paper.pdf";
+import legal_memo from "./assets/legal_memo.pdf";
+import financial_analysis from "./assets/financial_analysis.pdf";
 
-import conceptPaperIcon from './assets/icons/conceptPaperGray.svg';
-import demoIcon from './assets/icons/demoGray.svg';
-import legalMemoIcon from './assets/icons/legalMemo.svg';
-import finAnalIcon from './assets/icons/finAnalysis.svg';
-
+import conceptPaperIcon from "./assets/icons/conceptPaperGray.svg";
+import demoIcon from "./assets/icons/demoGray.svg";
+import legalMemoIcon from "./assets/icons/legalMemo.svg";
+import finAnalIcon from "./assets/icons/finAnalysis.svg";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
 
 const loadedDocs = {
   white_paper: white_paper,
   legal_memo: legal_memo,
   financial_analysis: financial_analysis
-}
+};
 
 const loadedSheets = {
   white_paper: "",
   legal_memo: "",
-  financial_analysis: "https://docs.google.com/spreadsheets/d/1haLVNhoToOg6-KumjUygiv-7O7XS5UEL0rsbmG1KBdI/edit?usp=sharing"
-}
-
+  financial_analysis:
+    "https://docs.google.com/spreadsheets/d/1haLVNhoToOg6-KumjUygiv-7O7XS5UEL0rsbmG1KBdI/edit?usp=sharing"
+};
 
 class Pdfviewer extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -46,7 +44,7 @@ class Pdfviewer extends React.Component {
     };
 
     window.SessionOpenModal = () => {
-      this.setState({openModal: true});
+      this.setState({ openModal: true });
     };
 
     window.SessionOpenModal = window.SessionOpenModal.bind(this);
@@ -54,13 +52,20 @@ class Pdfviewer extends React.Component {
     this.changePage = this.changePage.bind(this);
   }
 
-  toggleModal(idName) { //make one function with variables
+  toggleModal(idName) {
+    //make one function with variables
 
-    if(this.state.featuredDoc === idName || this.state.featuredDoc === "" || idName === 'close') {
-      let greyedLinksClass =  this.state.openModal? "" : "linkDiv-Grey";
-      let columnClass =  !this.state.openModal? "mainColumnRight" : "mainColumnCentral"
-      this.props.shiftMainColumn(columnClass)
-      let demoClass =  this.state.openModal? "" : "hidden"
+    if (
+      this.state.featuredDoc === idName ||
+      this.state.featuredDoc === "" ||
+      idName === "close"
+    ) {
+      let greyedLinksClass = this.state.openModal ? "" : "linkDiv-Grey";
+      let columnClass = !this.state.openModal
+        ? "mainColumnRight"
+        : "mainColumnCentral";
+      this.props.shiftMainColumn(columnClass);
+      let demoClass = this.state.openModal ? "" : "hidden";
 
       this.setState({
         openModal: !this.state.openModal,
@@ -70,57 +75,62 @@ class Pdfviewer extends React.Component {
         demoClass,
         greyedLinksClass
       });
-    }
-    else{
+    } else {
       this.setState({
         featuredDoc: idName,
         PDFDoc: loadedDocs[idName],
         sheet: loadedSheets[idName],
-        pageNumber: 1,
+        pageNumber: 1
       });
     }
   }
 
-
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
+  };
+
+  componentWillMount() {
+    Modal.setAppElement("body");
   }
 
-  componentWillMount(){
-    Modal.setAppElement('body');
+  changePage() {
+    this.state.pageNumber < this.state.numPages
+      ? this.setState({ pageNumber: this.state.pageNumber + 1 })
+      : this.setState({ pageNumber: 1 });
   }
-
-  changePage(){
-    this.state.pageNumber < this.state.numPages ?
-      this.setState({pageNumber:this.state.pageNumber+1})
-      : this.setState({pageNumber:1})
-  }
-
 
   render() {
     const { pageNumber, numPages } = this.state;
-    const {toggleModal} = this;
+    const { toggleModal } = this;
 
     const PageTurner = () => {
-      return(
+      return (
         <div className="PageTurner">
-          {this.state.pageNumber > 1 ?
-            <Button compact
+          {this.state.pageNumber > 1 ? (
+            <Button
+              compact
               className="pageturnerButton"
-              labelPosition='left'
-              icon='left chevron'
-              content='back'
-              onClick={() => this.setState({pageNumber:this.state.pageNumber-1})}/>
-            : ""}
-          <Button compact
+              labelPosition="left"
+              icon="left chevron"
+              content="back"
+              onClick={() =>
+                this.setState({ pageNumber: this.state.pageNumber - 1 })
+              }
+            />
+          ) : (
+            ""
+          )}
+          <Button
+            compact
             className="pageturnerButton"
-            labelPosition='right'
-            icon='right chevron'
-            content='next'
-            onClick={() => this.changePage()}/>
+            labelPosition="right"
+            icon="right chevron"
+            content="next"
+            onClick={() => this.changePage()}
+          />
         </div>
-      )
-    }
+      );
+    };
 
     return (
       <div className="pdfViewer-container">
@@ -146,7 +156,6 @@ class Pdfviewer extends React.Component {
           >
             <img alt="conceptMap" id="white_paper" src={conceptPaperIcon} />
             <div className="linkDescrip" id="white_paper">
-              {" "}
               CONCEPT PAPER
             </div>
           </div>
@@ -173,18 +182,18 @@ class Pdfviewer extends React.Component {
                 : this.state.greyedLinksClass
             } linkDiv`}
             id="financial_analysis"
-            onClick={e => toggleModal(e.target.id)}
           >
-            <img
-              alt="financial_analysis"
-              id="financial_analysis"
-              onClick={e => toggleModal(e.target.id)}
-              src={finAnalIcon}
-            />
-            <div className="linkDescrip" id="financial_analysis">
-              {" "}
-              FINANCIAL ANALYSIS{" "}
-            </div>
+            <A href="/economicslides">
+              <img
+                alt="financial_analysis"
+                id="financial_analysis"
+                onClick={e => toggleModal(e.target.id)}
+                src={finAnalIcon}
+              />
+              <div className="linkDescrip" id="financial_analysis">
+                ECONOMIC ANALYSIS
+              </div>
+            </A>
           </div>
         </div>
 

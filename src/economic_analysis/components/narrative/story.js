@@ -69,7 +69,7 @@ const story = [
       },
       {
         text: `
-          There is also a significant misalignment of incentives between local stakeholders and new stakeholders. Economists, like Ed Glaeser, suggest that housing market inefficiencies stem from regulatory stranglehold. While true, there are deeper causes that incentivize the creation of regulation and zoning that stymies development. Current owners have significant incentives to curtail new development, be they individual families, or a limited number of property developers. Existing owners of property are concerned with the housing values maintaining as they are. Housing value is a function of rents, so local rental rates of a direct impact on an owner’s home valuation. As a result an owner will actively block any new development if it may mean lower rents in an area. Due to the way our political structure works, an owner has significant power over the development that happens in their neighborhood, but little say in what happens in other neighborhoods. When ownership is concentrated and localized in any form, nimbyism thrives. Similarly, when ownership is concentrated in an area among only a handful of developers, such developers have reasons to block new development in an area, unless it is responding to demand at current prices. The most extreme case of nimbyism is in San Francisco, where building heights are maintained at low densities throughout the city. 
+          There is also a significant misalignment of incentives between local stakeholders and new stakeholders. Economists, like Ed Glaeser, suggest that housing market inefficiencies stem from regulatory stranglehold. While true, there are deeper causes that incentivize the creation of regulation and zoning that stymies development. Current owners have significant incentives to curtail new development, be they individual families, or a limited number of property developers. Existing owners of property are concerned with the housing values maintaining as they are. Housing value is a function of rents, so local rental rates have a direct impact on an owner’s home valuation. As a result local owners have incentives to actively block new development if it may mean lower local rents. Due to the way our political structure works, an owner has significant power over the development that happens in their neighborhood, but little say in what happens in other neighborhoods. When ownership is concentrated and localized in any form, nimbyism thrives. Similarly, when ownership is concentrated in an area among only a handful of developers, such developers have reasons to block new development in an area, unless it is responding to demand at current prices. The most extreme case of nimbyism is in San Francisco, where building heights are maintained at low densities throughout the city. 
         `,
         start: s._2_strt + 4,
         end: s._2_strt + 5
@@ -148,14 +148,14 @@ const story = [
     discuss: [
       {
         text: `
-          NYC is the most expensive city to develop in, but it has relatively cheaper housing than SF, DC, and Seattle. It has more supply, both horizontally and vertically because significant urban/multi-family development occurred before the advent of the car and the mortgage financing apparatus was created and because much of the city was hallowed out during the suburbanization that occurred in the later half of the 20th century. Thus there has been significant potential for infill development to absorb demand. 
+          NYC is the most expensive city to develop in, but it has relatively cheaper housing than SF, DC, and Seattle. It has more supply, both horizontally and vertically because significant urban/multi-family development occurred before the advent of the car and the mortgage financing apparatus was created and because much of the city was hollowed out during the suburbanization that occurred in the later half of the 20th century. Thus there has been significant potential for infill development to absorb demand. 
         `,
         start: s._4_strt,
         end: s._4_strt + 3
       },
       {
         text: `
-          70% of the current housing stock was built before 1950, after the advent of the car, and after Fannie Mae went public. While having an historically large stock of housing has helped NYC remain relatively affordable, when compared to peer cities, new development has only occurred in areas where condo/co-op ownership is already low. The massive potential for infill development has helped buoy New York as demand in the city surged. Relative to demand, little new residential development has taken place in nyc. The idea that NYC, the majority of whose housing stock is many decades old, is overbuilt because rental prices are falling is silly, NYC is overpriced, not overbuilt.  The population has started to decline because rents are too high, not because there is insufficient demand.
+          70% of the current housing stock was built before 1950, after the advent of the car, and after Fannie Mae went public. While having an historically large stock of housing has helped NYC remain relatively affordable, when compared to peer cities, new development has only occurred in areas where condo/co-op ownership is already low. The massive potential for infill development has helped buoy New York as demand in the city surged. But relative to demand, little new residential development has taken place in nyc. The idea that NYC, the majority of whose housing stock is many decades old, is overbuilt because rental prices are falling is silly, NYC is overpriced, not overbuilt.  The population has started to decline because rents are too high, not because there is insufficient demand.
         `,
         start: s._4_strt + 3,
         end: s._4_strt + 5
@@ -241,7 +241,7 @@ const story = [
       },
       {
         text: `
-          In single detached housing markets like Houston, where job growth and demand is as high as other major cities, the market is driven by supply related factors. A developer is motivated by new income growth from new properties than, even if greater supply may mean lower rents overall. This is primarily because the number of developers is many, given that the barriers to entry are so small.  The major barrier in Houston for entering the market as a developer is not regulation, but rather capital. Further, properties are so spread out that the chances of a developer facing a lowered income, and indirectly lowered property values, from properties they are developing is small. 
+          In single detached housing markets like Houston, where job growth and demand is as high as other major cities, the market is driven by supply related factors. A developer is motivated by new income growth from new properties, even if greater supply may mean lower rents overall. This is primarily because the number of developers is many, due to the barriers to entry being few and surmountable.  The major barrier in Houston for entering the market as a developer is not regulation, but rather capital. Further, properties are so spread out that the chances of a developer facing a lowered income, and indirectly lowered property values, from properties they are developing is small. 
         `,
         start: s._6_strt + 4,
         end: s._6_strt + 8
@@ -250,7 +250,7 @@ const story = [
         text: `
           Multi-family developers have a near monopoly on development in urban areas. They have little interest in building new properties if it will mean a lowering of housing values.
 
-          In 2015, US net wealth was $80 trillion. Household ownership of real estate was $25 trillion out of a total of $31 trillion of non-financial assets. Non-financial non-corporate businesses assets were $12 trillion, of which real estate was $11 trillion. For comparison, the market value of domestic corporations was $29 trillion. (https://www.progress.org/articles/american-wealth-and-real-estate). 
+          In 2015, US net wealth was $80 trillion. Household ownership of real estate was $25 trillion out of a total of $31 trillion of non-financial assets. Non-financial non-corporate businesses assets were $12 trillion, of which real estate was $11 trillion. For comparison, the market value of domestic corporations was $29 trillion.
         `,
         start: s._6_strt + 8,
         end: s._6_strt + 10
